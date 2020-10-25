@@ -1,7 +1,10 @@
+require 'rack-flash'
+
 class SongsController < Sinatra::Base
     register Sinatra::ActiveRecordExtension
     set :session_secret, "my_application_secret"
     set :views, Proc.new { File.join(root, "../views/") }
+    use Rack::Flash 
 
     get '/songs' do 
         @songs = Song.all 
@@ -24,7 +27,7 @@ class SongsController < Sinatra::Base
         @song.save
        # binding.pry
          flash[:message] = "Successfully created song."
-        # binding.pry 
+         binding.pry 
          redirect to("/songs/#{@song.slug}")
         #erb :"/songs/show", locals: {message: "Successfully created song."}
 
