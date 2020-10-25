@@ -1,7 +1,7 @@
 class Artist < ActiveRecord::Base 
     has_many :songs 
     has_many :genres, :through => :songs
-    
+
     def slug 
         name.downcase.gsub(" ", "-")
       end 
@@ -10,6 +10,3 @@ class Artist < ActiveRecord::Base
         Artist.all.find {|artist| artist.slug == slug}
       end 
     end 
-
-#extend Slugifiable::ClassMethods
-#include Slugifiable::InstanceMethods
