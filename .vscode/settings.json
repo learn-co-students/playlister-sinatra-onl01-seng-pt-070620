@@ -1,0 +1,11 @@
+{
+  "vsintellicode.features.python.deepLearning": "enabled",
+  "solargraph.formatting": true,
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  "sync.gist": "be8b9f2feae27d745820d816123f4f2e",
+  "liveshare.guestApprovalRequired": true,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 100
+}
